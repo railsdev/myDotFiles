@@ -5,7 +5,7 @@ apt install python-dev python-pip python3-dev python3-pip
 apt install nodejs
 apt install golang
 apt install zsh
-apt install ctags
+apt install exuberant-ctags
 apt install vim vim-gtk nvim 
 chsh -s /bin/zsh
 zsh
