@@ -8,21 +8,11 @@
 " --------- Plugin Manager ---------
 " ----------------------------------
 
-" Setup NeoBundle
-if has("win32")
-  set runtimepath+=~/vimfiles/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/vimfiles/bundle/'))
-else
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
-endif
 
 
 call plug#begin('~/.vim/plugged')
 
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Original repos
 Plug 'altercation/vim-colors-solarized'
@@ -100,18 +90,9 @@ Plug 'lambdalisue/vim-fullscreen'
 
 
 call plug#end()
-" Platform-specific
-if has("win32")
-  NeoBundle 'vim-scripts/aspnetcs'
-else
-  NeoBundle 'majutsushi/tagbar'
-  NeoBundle 'vim-scripts/AutoTag'
-endif
 
 " Turn on filetype plugin and indentation handling
 filetype plugin indent on
-
-NeoBundleCheck
 
 " --------------------------
 
